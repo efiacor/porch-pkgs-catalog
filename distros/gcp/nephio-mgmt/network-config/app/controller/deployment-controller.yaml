@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: # kpt-merge: network-config/network-config-controller
-  creationTimestamp: null
+  
   name: network-config-controller
   namespace: network-config
   annotations:
@@ -14,7 +14,7 @@ spec:
   strategy: {}
   template:
     metadata:
-      creationTimestamp: null
+      
       labels:
         app.kubernetes.io/component: tbd
         app.kubernetes.io/instance: tbd
@@ -74,7 +74,7 @@ spec:
           value: "true"
         - name: ENABLE_NETWORKCONFIGS
           value: "true"
-        image: docker.io/nephio/network-config-operator:v2.0.0
+        image: docker.io/nephio/network-config-operator:latest
         livenessProbe:
           httpGet:
             path: /healthz
