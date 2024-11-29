@@ -1,16 +1,16 @@
 apiVersion: config.porch.kpt.dev/v1alpha1
 kind: PackageVariant
 metadata:
-  name: example-flux-src-kustomization
+  name: example-flux-gitrepo-kustomize
 spec:
   annotations:
     approval.nephio.org/policy: initial
   upstream:
-    package: flux-gitrepo-kust
+    package: flux-gitrepo-kustomize
     repo: catalog-nephio-optional
     revision: main
   downstream:
-    package: example-flux-gr-kust
+    package: example-flux-gitrepo-kustomize
     repo: mgmt
   injectors:
   - kind: WorkloadCluster

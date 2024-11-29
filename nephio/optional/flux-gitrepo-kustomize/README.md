@@ -1,4 +1,4 @@
-# flux-edge-src-kust
+# flux-gitrepo-kustomize
 
 ## Description
 
